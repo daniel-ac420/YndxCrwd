@@ -1,0 +1,120 @@
+.slide--desktop {
+	position: relative;
+	display: none;
+	justify-content: center;
+	align-content: center;
+	gap: 20px;
+}
+
+.slide-navigation--desktop {
+    position: absolute;
+    content: "";
+    top: -112px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.slide--mobile-box {
+	display: none !important;
+}
+
+.slide-navigation--mobile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 14px;
+	margin-top: 40px;
+}
+
+.slide-navigation--mobile .slide-navigation__arrow {
+	width: 36px;
+	height: 36px;
+	background-size: contain;
+}
+
+.slide-navigation__arrow {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	background-color: unset;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.slide-navigation__arrow.prev {
+	background-image: url("../icons/carousel-button-right-normal.svg");
+	transform: rotate(180deg);
+}
+
+.slide-navigation__arrow.next {
+	background-image: url("../icons/carousel-button-right-normal.svg");
+}
+
+.slide-navigation__arrow:hover {
+	background-image: url("../icons/carousel-button-right-hover.svg");
+}
+
+.slide-navigation__arrow:focus {
+	background-image: url("../icons/carousel-button-right-hover.svg");
+	border-radius: 50%;
+	outline: 2px solid var(--colorYellow);
+	outline-offset: 5px;
+}
+
+.slide-navigation__arrow[disabled] {
+	background-image: url("../icons/carousel-button-right-disabled.svg");
+}
+
+.numbertext--amount {
+	opacity: 0.6; 
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 2.25s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.25
+	} 
+	to {
+		opacity: 1
+	}
+}
+
+
+
+@media (max-width: 1180px) {
+	
+	.slide-navigation--desktop {
+		position: absolute;
+		content: "";
+		top: -150px;
+		right: 0;
+		display: flex;
+		align-items: center;
+		gap: 14px;
+	}
+}
+/* ↑↑↑ 1180px ↑↑↑ */
+
+
+
+@media (max-width: 768px) {
+	
+	.slide--desktop {
+		display: none !important;
+	}
+	
+	.slide--mobile-box {
+		display: block !important;
+	}
+
+}
+/* ↑↑↑ 768px ↑↑↑ */

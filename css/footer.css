@@ -1,0 +1,8 @@
+.footer {
+	padding: 40px 0 72px;
+	background-color: var(--colorBeige);
+}
+
+.footer__description {
+	opacity: 0.6;
+}
